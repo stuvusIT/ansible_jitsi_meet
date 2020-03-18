@@ -1,0 +1,19 @@
+---
+- name: Add apt key
+  apt_key:
+   url: https://download.jitsi.org/jitsi-key.gpg.key
+   id: EF8B479E2DC1389C
+
+- name: Add apt repository
+  apt_repository:
+    repo: deb https://download.jitsi.org stable/
+    update_cache: True
+
+- name: Preseed debconf
+  shell: echo "jitsi-videobridge jitsi-videobridge/jvb-hostname string {{ jitsi_meet_hostname }}" | debconf-set-selections
+  changed_when: False
+
+- name: Install jitsi-meet
+  apt:
+    name:
+      - jitsi-meet

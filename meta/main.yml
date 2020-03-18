@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: haslersn
-  description: Matrix homeserver; see https://github.com/matrix-org/synapse
+  description: Installs Jitsi Meet; see https://github.com/jitsi/jitsi-meet
   company: stuvus (https://stuvus.uni-stuttgart.de)
 
   license: AGPLv3
@@ -14,11 +14,11 @@ galaxy_info:
         - stretch
 
   galaxy_tags:
-    - matrix
-    - matrix-org
-    - server
-    - homeserver
+    - jitsi
+    - jitsi-meet
     - messenger
-    - mail
+    - conference
+    - audio
+    - video
 
 dependencies: []
